@@ -1,0 +1,41 @@
+{
+  "collection_timestamp": "2026-10-26T16:30:02.231918+00:00",
+  "primary_dataset": {
+    "name": "UCI Student Performance Data Set",
+    "url": "https://archive.ics.uci.edu/static/public/320/student+performance.zip",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "citation": "Cortez, P., & Silva, A. (2008). Using data mining to predict secondary school student performance. FUBUTEC 2008, Porto, Portugal. EUROSIS.",
+    "downloaded_files": {
+      "student-mat.csv": {
+        "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\student-mat.csv",
+        "size_bytes": 56993,
+        "sha256": "e47f9ee225e1ee6e69b7564e6dac7123e80b8486677fe111f351964cef5dec80"
+      },
+      "student-por.csv": {
+        "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\student-por.csv",
+        "size_bytes": 93220,
+        "sha256": "a7594a11d7771c0efe1a740824e0e833da9c4cad07c39a9766a874575563fb3f"
+      },
+      "student-merge.R": {
+        "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\student-merge.R",
+        "size_bytes": 269,
+        "sha256": "a04f4ef19551c319428f642269c125faa21c521045946beead1c32e656269d31"
+      },
+      "student.txt": {
+        "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\student.txt",
+        "size_bytes": 3206,
+        "sha256": "f8d3e734e237071312790ca667330c66d75e706317f8d5e2125c479d70e962c1"
+      }
+    }
+  },
+  "web_scraped_metadata": {
+    "source_page": "https://archive.ics.uci.edu/dataset/320/student+performance",
+    "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\scraped_public_metadata.json",
+    "status": "Genuinely scraped via BeautifulSoup"
+  },
+  "statutory_curriculum_reference": {
+    "path": "C:\\Users\\KEERTHI\\Downloads\\DSES IA PROJECT\\data\\raw\\curriculum_metadata.json",
+    "source": "Decreto-Lei n. 139/2012, Direcao-Geral da Educacao (DGE), Portugal"
+  },
+  "grouping_key_note": "student_id is an invariant demographic composite key used for cross-course leakage prevention, not a verified real-world identity."
+}

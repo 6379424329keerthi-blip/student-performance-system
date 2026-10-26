@@ -1,0 +1,50 @@
+{
+  "metadata_type": "Statutory Secondary Curriculum Standards (Domain Reference)",
+  "governing_body": "Direcao-Geral da Educacao (DGE), Portugal",
+  "legal_basis": "Decreto-Lei n. 139/2012 (Ensino Secundario - Organizacao Curricular e Avaliacao)",
+  "grading_scale": {
+    "scale": "0 to 20 integer points",
+    "statutory_cutoff_for_passing": 10,
+    "statutory_failure_definition": "Final score G3 < 10 represents academic insufficiency (retencao / reprovado), requiring repetition or summer exam.",
+    "satisfactory_band": "10 <= G3 < 14 (Passing without retention)",
+    "good_to_excellent_band": "14 <= G3 <= 20"
+  },
+  "evaluation_milestones_and_assumptions": {
+    "G1": {
+      "period": "1st Period Formative Evaluation",
+      "calendar_assumption": "December (Month 3 of 10-month academic year)",
+      "operational_role": "Used as candidate predictor; provides 6-month actionable intervention runway."
+    },
+    "G2": {
+      "period": "2nd Period Mid-term Evaluation",
+      "calendar_assumption": "March/April (Month 7 of academic year)",
+      "operational_role": "Strictly excluded from early-warning predictor set to avoid near-target leakage."
+    },
+    "G3": {
+      "period": "3rd Period Final Summative Grade",
+      "calendar_assumption": "June/July (End of academic year)",
+      "operational_role": "Target variable only; never used as an input feature."
+    }
+  },
+  "grouping_key_specification": {
+    "key_name": "student_id",
+    "nature": "Composite demographic grouping key (not an official legal student identifier)",
+    "purpose": "Groups 382 multi-course records to guarantee zero cross-course student leakage between train and test splits.",
+    "attributes_used": [
+      "school",
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Medu",
+      "Fedu",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "nursery",
+      "internet"
+    ]
+  },
+  "created_at": "2026-10-26T16:30:02.229365+00:00"
+}

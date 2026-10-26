@@ -1,0 +1,136 @@
+{
+  "model_title": "Smart Student Performance Prediction & Risk Analytics System",
+  "training_timestamp": "2026-10-26T16:26:31.842770+00:00",
+  "random_state": 42,
+  "selected_classifier": {
+    "name": "RandomForestClassifier",
+    "architecture": "RandomForestClassifier",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 6,
+      "min_samples_split": 5,
+      "class_weight": "balanced"
+    },
+    "primary_metric": "Recall & Macro F1 (Prioritizing early detection of failing students)",
+    "test_performance": {
+      "accuracy": 0.8708133971291866,
+      "recall": 0.9347826086956522,
+      "precision": 0.6417910447761194,
+      "f1": 0.7610619469026548,
+      "macro_f1": 0.8362686783693603,
+      "roc_auc": 0.9473192851427048,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            139,
+            24
+          ],
+          [
+            3,
+            43
+          ]
+        ],
+        "tn": 139,
+        "fp": 24,
+        "fn": 3,
+        "tp": 43
+      }
+    }
+  },
+  "selected_regressor": {
+    "name": "GradientBoostingRegressor",
+    "architecture": "GradientBoostingRegressor",
+    "hyperparameters": {
+      "alpha": 0.9,
+      "learning_rate": 0.08,
+      "max_depth": 3,
+      "min_samples_split": 2,
+      "n_estimators": 120,
+      "subsample": 1.0
+    },
+    "test_performance": {
+      "mae": 1.3723013373971624,
+      "rmse": 1.9814503144205953,
+      "r2": 0.7528057174361369
+    }
+  },
+  "features": {
+    "all_predictors": [
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences",
+      "G1",
+      "course",
+      "school",
+      "sex",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic"
+    ],
+    "numerical_features": [
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences",
+      "G1"
+    ],
+    "categorical_features": [
+      "course",
+      "school",
+      "sex",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic"
+    ],
+    "transformed_count": 59
+  },
+  "leakage_safeguards": [
+    "Strict exclusion of G3 from predictors",
+    "Strict exclusion of G2 from predictors (preserving authentic mid-term early warning)",
+    "Grouping by student_id across courses (0 overlapping students in train and test)",
+    "Preprocessing ColumnTransformer fitted strictly inside CV folds and on training data"
+  ]
+}

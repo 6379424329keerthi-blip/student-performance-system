@@ -1,0 +1,32 @@
+{
+  "source_type": "Genuinely Web-Scraped Public Documentation",
+  "source_url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+  "collection_timestamp": "2026-10-26T16:30:02.223881+00:00",
+  "http_status": 200,
+  "page_title": "UCI Machine Learning Repository",
+  "identified_headings": [
+    "Student Performance",
+    "Donated on 11/26/2014",
+    "Dataset Characteristics",
+    "Subject Area",
+    "Associated Tasks",
+    "Feature Type",
+    "# Instances",
+    "# Features",
+    "Dataset Information",
+    "Introductory Paper"
+  ],
+  "introductory_text_snippet": "Predict student performance in secondary education (high school).",
+  "dataset_provenance": {
+    "dataset_name": "Student Performance Data Set",
+    "repository_id": 320,
+    "domain": "Secondary Education (Mathematics & Portuguese Language)",
+    "terms_of_use": "Publicly accessible benchmark under Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  },
+  "scraping_compliance": {
+    "robots_txt_respected": true,
+    "rate_limiting_respected": true,
+    "pii_harvested": false,
+    "ethics_note": "No private or individual student records were scraped. Only public metadata was ingested."
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "predictors": [
+    "age",
+    "Medu",
+    "Fedu",
+    "traveltime",
+    "studytime",
+    "failures",
+    "famrel",
+    "freetime",
+    "goout",
+    "Dalc",
+    "Walc",
+    "health",
+    "absences",
+    "G1",
+    "course",
+    "school",
+    "sex",
+    "address",
+    "famsize",
+    "Pstatus",
+    "Mjob",
+    "Fjob",
+    "reason",
+    "guardian",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "nursery",
+    "higher",
+    "internet",
+    "romantic"
+  ],
+  "numerical": [
+    "age",
+    "Medu",
+    "Fedu",
+    "traveltime",
+    "studytime",
+    "failures",
+    "famrel",
+    "freetime",
+    "goout",
+    "Dalc",
+    "Walc",
+    "health",
+    "absences",
+    "G1"
+  ],
+  "categorical": [
+    "course",
+    "school",
+    "sex",
+    "address",
+    "famsize",
+    "Pstatus",
+    "Mjob",
+    "Fjob",
+    "reason",
+    "guardian",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "nursery",
+    "higher",
+    "internet",
+    "romantic"
+  ],
+  "defaults": {
+    "course": "Math",
+    "school": "GP",
+    "sex": "F",
+    "age": 16,
+    "address": "U",
+    "famsize": "GT3",
+    "Pstatus": "T",
+    "Medu": 3,
+    "Fedu": 3,
+    "Mjob": "services",
+    "Fjob": "services",
+    "reason": "course",
+    "guardian": "mother",
+    "traveltime": 1,
+    "studytime": 2,
+    "failures": 0,
+    "schoolsup": "no",
+    "famsup": "yes",
+    "paid": "no",
+    "activities": "yes",
+    "nursery": "yes",
+    "higher": "yes",
+    "internet": "yes",
+    "romantic": "no",
+    "famrel": 4,
+    "freetime": 3,
+    "goout": 3,
+    "Dalc": 1,
+    "Walc": 2,
+    "health": 4,
+    "absences": 4,
+    "G1": 12
+  },
+  "ranges": {
+    "age": [
+      15,
+      22
+    ],
+    "traveltime": [
+      1,
+      4
+    ],
+    "studytime": [
+      1,
+      4
+    ],
+    "failures": [
+      0,
+      4
+    ],
+    "famrel": [
+      1,
+      5
+    ],
+    "freetime": [
+      1,
+      5
+    ],
+    "goout": [
+      1,
+      5
+    ],
+    "Dalc": [
+      1,
+      5
+    ],
+    "Walc": [
+      1,
+      5
+    ],
+    "health": [
+      1,
+      5
+    ],
+    "absences": [
+      0,
+      93
+    ],
+    "G1": [
+      0,
+      20
+    ]
+  },
+  "categorical_options": {
+    "course": [
+      "Math",
+      "Portuguese"
+    ],
+    "school": [
+      "GP",
+      "MS"
+    ],
+    "sex": [
+      "F",
+      "M"
+    ],
+    "address": [
+      "U",
+      "R"
+    ],
+    "famsize": [
+      "LE3",
+      "GT3"
+    ],
+    "Pstatus": [
+      "T",
+      "A"
+    ],
+    "Mjob": [
+      "teacher",
+      "health",
+      "services",
+      "at_home",
+      "other"
+    ],
+    "Fjob": [
+      "teacher",
+      "health",
+      "services",
+      "at_home",
+      "other"
+    ],
+    "reason": [
+      "home",
+      "reputation",
+      "course",
+      "other"
+    ],
+    "guardian": [
+      "mother",
+      "father",
+      "other"
+    ],
+    "schoolsup": [
+      "yes",
+      "no"
+    ],
+    "famsup": [
+      "yes",
+      "no"
+    ],
+    "paid": [
+      "yes",
+      "no"
+    ],
+    "activities": [
+      "yes",
+      "no"
+    ],
+    "nursery": [
+      "yes",
+      "no"
+    ],
+    "higher": [
+      "yes",
+      "no"
+    ],
+    "internet": [
+      "yes",
+      "no"
+    ],
+    "romantic": [
+      "yes",
+      "no"
+    ]
+  }
+}
