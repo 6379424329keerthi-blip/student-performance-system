@@ -3,9 +3,20 @@
  * Supports both local development (via Vite proxy) and production cloud deployment (e.g., Render, Hugging Face).
  */
 
-// If VITE_API_BASE_URL is provided (e.g., 'https://student-analytics-backend.onrender.com'),
-// use it; otherwise fallback to local relative path '/api'.
-const rawBase = import.meta.env.VITE_API_BASE_URL || '';
+// Base URL configuration:
+// 1. If VITE_API_BASE_URL is explicitly set (e.g. from GitHub Actions vars/secrets or .env), use it.
+// 2. In cloud environments (non-localhost, like GitHub Pages), fallback to the deployed Render backend URL.
+// 3. In local development (localhost / 127.0.0.1), fallback to relative '/api' which Vite proxies to local FastAPI (:8000).
+const DEFAULT_RENDER_URL = 'https://student-performance-api.onrender.com';
+
+const isLocalhost = typeof window !== 'undefined' && (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname === '0.0.0.0'
+);
+
+const envBase = import.meta.env.VITE_API_BASE_URL;
+const rawBase = envBase || (!isLocalhost ? DEFAULT_RENDER_URL : '');
 const API_BASE = rawBase ? `${rawBase.replace(/\/$/, '')}/api` : '/api';
 
 async function request(endpoint, options = {}) {
@@ -185,6 +196,8 @@ export const api = {
   }),
   getCollegeTemplateUrl: () => `${API_BASE}/college/datasets/template`,
   getCollegeExportUrl: (datasetId) => `${API_BASE}/college/datasets/${datasetId}/export`,
+  getImportHistory: (datasetId) => request(`/college/datasets/${datasetId}/imports`),
+  getBaseUrl: () => API_BASE,
 
   // College Students CRUD & ML Inference
   getCollegeStudents: (params = {}) => {
